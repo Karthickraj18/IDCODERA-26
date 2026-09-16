@@ -1,0 +1,600 @@
+/* ==========================================================================
+   GLOBAL LIGHT FIELD & SIGNATURE ORB
+   ========================================================================== */
+.global-light-field {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -3;
+    overflow: hidden;
+}
+
+.gl-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.4;
+}
+
+.gl-orb-1 {
+    width: 60vw;
+    height: 60vw;
+    background: var(--violet-base);
+    top: -20%;
+    left: -20%;
+}
+
+.gl-orb-2 {
+    width: 50vw;
+    height: 50vw;
+    background: var(--magenta);
+    bottom: -10%;
+    right: -10%;
+}
+
+.gl-orb-3 {
+    width: 40vw;
+    height: 40vw;
+    background: var(--violet-neon);
+    top: 50%;
+    left: 30%;
+}
+
+.signature-orb {
+    position: fixed;
+    width: 12px;
+    height: 12px;
+    background: var(--magenta);
+    border-radius: 50%;
+    box-shadow: 0 0 20px 5px var(--magenta);
+    pointer-events: none;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s, height 0.3s;
+    opacity: 0.8;
+}
+
+/* ==========================================================================
+   EVENT AT A GLANCE (CINEMATIC)
+   ========================================================================== */
+.glance-section.cinematic-section {
+    background: transparent;
+    border: none;
+    padding: 10vw 4vw;
+}
+
+.glance-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6vw;
+}
+
+.glance-split {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    max-width: 1200px;
+}
+
+.glance-date {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+}
+
+.g-massive {
+    font-family: var(--font-display);
+    font-size: clamp(60px, 12vw, 150px);
+    font-weight: 700;
+    line-height: 0.8;
+    color: var(--text-main);
+}
+
+.g-sub {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-mono);
+    font-size: clamp(16px, 2vw, 24px);
+    color: var(--violet-neon);
+    letter-spacing: 0.1em;
+}
+
+.glance-deadline {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+}
+
+.g-sub-lbl {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    color: var(--text-muted);
+    letter-spacing: 0.2em;
+}
+
+.g-massive-alt {
+    font-family: var(--font-display);
+    font-size: clamp(40px, 8vw, 100px);
+    font-weight: 700;
+    line-height: 0.9;
+    color: var(--text-main);
+}
+
+.glance-centerpiece {
+    position: relative;
+    text-align: center;
+    padding: 4vw 0;
+}
+
+.prize-glow-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150%;
+    height: 150%;
+    background: radial-gradient(circle, rgba(168, 85, 247, 0.2) 0%, transparent 60%);
+    z-index: -1;
+    filter: blur(20px);
+}
+
+.g-prize-val {
+    display: block;
+    font-family: var(--font-display);
+    font-size: clamp(80px, 15vw, 220px);
+    font-weight: 700;
+    line-height: 1;
+}
+
+.g-prize-lbl {
+    font-family: var(--font-mono);
+    font-size: clamp(14px, 2vw, 20px);
+    letter-spacing: 0.4em;
+    color: var(--text-main);
+}
+
+.glance-footer {
+    display: flex;
+    gap: 4vw;
+}
+
+/* ==========================================================================
+   COUNTDOWN (CINEMATIC)
+   ========================================================================== */
+.countdown-section.cinematic-section {
+    position: relative;
+    padding: 8vw 4vw;
+}
+
+.cd-bg-elements {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cd-glow {
+    width: 60vw;
+    height: 60vw;
+    background: radial-gradient(circle, rgba(217, 70, 239, 0.15) 0%, transparent 70%);
+    filter: blur(40px);
+    border-radius: 50%;
+}
+
+.cd-ring {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.cd-ring-1 { width: 50vw; height: 50vw; animation: spinReverse 30s linear infinite; }
+.cd-ring-2 { width: 40vw; height: 40vw; border-style: dashed; animation: spin 25s linear infinite; }
+
+.cinematic-grid {
+    gap: 4vw;
+}
+
+.cd-item {
+    position: relative;
+}
+
+.cd-sep {
+    position: absolute;
+    right: -2vw;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 50%;
+    background: linear-gradient(to bottom, transparent, var(--violet-neon), transparent);
+}
+.cd-item:last-child .cd-sep { display: none; }
+
+/* ==========================================================================
+   PRIZES (CINEMATIC PODIUM)
+   ========================================================================== */
+.prizes-section.cinematic-section {
+    background: transparent;
+    position: relative;
+    overflow: visible;
+}
+
+.prize-energy-bg {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100vw;
+    background: radial-gradient(circle, rgba(168,85,247,0.1) 0%, transparent 60%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.total-pool-cinematic {
+    text-align: center;
+    margin-bottom: 6vw;
+}
+
+.tp-lbl {
+    display: block;
+    font-family: var(--font-mono);
+    letter-spacing: 0.2em;
+    color: var(--text-muted);
+}
+
+.tp-val {
+    font-family: var(--font-display);
+    font-size: clamp(60px, 10vw, 140px);
+    font-weight: 700;
+}
+
+.cinematic-podium {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 2vw;
+    height: 400px;
+    position: relative;
+}
+
+.cinematic-card {
+    background: rgba(22, 5, 43, 0.6);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.4s;
+}
+
+.cinematic-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--violet-neon);
+}
+
+.cinematic-card.center-stage {
+    height: 350px;
+    width: 300px;
+    border-color: var(--violet-bright);
+    box-shadow: 0 0 40px rgba(168, 85, 247, 0.3);
+    z-index: 2;
+    position: relative;
+}
+
+.pt-glow-epic {
+    position: absolute;
+    inset: -20%;
+    background: radial-gradient(circle, rgba(217,70,239,0.2) 0%, transparent 60%);
+    z-index: -1;
+    filter: blur(20px);
+    animation: corePulse 3s infinite alternate;
+}
+
+/* ==========================================================================
+   REGISTRATION (EPIC CTA)
+   ========================================================================== */
+.registration-section.cinematic-section {
+    background: transparent;
+    padding: 15vw 4vw;
+    position: relative;
+}
+
+.reg-epic-bg {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(168, 85, 247, 0.15) 0%, transparent 70%);
+    z-index: -1;
+}
+
+.cinematic-reg {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.reg-headline {
+    font-family: var(--font-display);
+    font-size: clamp(40px, 8vw, 100px);
+    font-weight: 700;
+}
+
+.reg-sub {
+    font-family: var(--font-mono);
+    color: var(--violet-neon);
+    letter-spacing: 0.3em;
+    margin-bottom: 3rem;
+}
+
+.reg-details-cinematic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    font-family: var(--font-mono);
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+.rd-sep {
+    width: 1px;
+    height: 40px;
+    background: rgba(255,255,255,0.2);
+}
+
+.highlight-rd {
+    color: var(--text-main);
+    font-weight: 700;
+}
+
+.reg-cta-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.reg-cta-glow {
+    position: absolute;
+    inset: -20px;
+    background: var(--violet-neon);
+    filter: blur(30px);
+    opacity: 0.3;
+    border-radius: 50px;
+    transition: opacity 0.4s;
+    z-index: 0;
+}
+
+.reg-cta-wrapper:hover .reg-cta-glow {
+    opacity: 0.6;
+    background: var(--magenta);
+}
+
+.btn-epic {
+    font-family: var(--font-display);
+    font-size: 24px;
+    font-weight: 700;
+    padding: 20px 60px;
+    border-radius: 50px;
+    background: var(--text-main);
+    color: var(--violet-dark);
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    transition: transform 0.3s, background 0.3s;
+}
+.btn-epic:hover {
+    transform: scale(1.05);
+}
+
+/* ==========================================================================
+   CONTACT & LOCATION & FAQ
+   ========================================================================== */
+.cinematic-info {
+    background: transparent !important;
+    border: none !important;
+    border-left: 1px solid var(--line) !important;
+    border-radius: 0 !important;
+    padding-left: 30px !important;
+}
+
+.info-subtitle {
+    font-family: var(--font-mono);
+    color: var(--violet-neon);
+    letter-spacing: 0.1em;
+    margin-bottom: 2rem;
+}
+
+.cinematic-map {
+    position: relative;
+    border: 1px solid rgba(168,85,247,0.3);
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 2px;
+    background: linear-gradient(135deg, rgba(168,85,247,0.2), transparent);
+}
+
+.cinematic-map iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    border: none;
+    filter: grayscale(1) contrast(1.2) sepia(0.2) hue-rotate(240deg);
+}
+
+.map-glow {
+    position: absolute;
+    inset: 0;
+    box-shadow: inset 0 0 40px rgba(168,85,247,0.2);
+    pointer-events: none;
+}
+
+/* FAQ */
+.cinematic-accordion .accordion-item {
+    background: transparent;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.cinematic-accordion .accordion-trigger {
+    transition: color 0.3s;
+}
+
+.cinematic-accordion .accordion-trigger[aria-expanded="true"] {
+    color: var(--violet-neon);
+}
+
+.cinematic-accordion .accordion-trigger[aria-expanded="true"] .acc-icon {
+    transform: rotate(45deg); /* + becomes x */
+    color: var(--magenta);
+}
+
+/* ==========================================================================
+   FOOTER (END CREDITS)
+   ========================================================================== */
+.cinematic-footer {
+    position: relative;
+    background: transparent;
+    padding: 10vw 4vw 4vw;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    overflow: hidden;
+}
+
+.footer-glow-bg {
+    position: absolute;
+    bottom: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150vw;
+    height: 100vw;
+    background: radial-gradient(circle at bottom, rgba(76,29,149,0.2) 0%, transparent 60%);
+    z-index: -1;
+}
+
+.f-headline.massive {
+    font-family: var(--font-display);
+    font-size: clamp(60px, 12vw, 160px);
+    font-weight: 700;
+    line-height: 0.9;
+    letter-spacing: -0.05em;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+    position: relative;
+}
+
+.f-headline.massive::before {
+    content: attr(data-text);
+    position: absolute;
+    inset: 0;
+    color: rgba(255,255,255,0.8);
+    -webkit-text-stroke: 0;
+    clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+}
+
+.cinematic-links {
+    display: flex;
+    justify-content: center;
+    gap: 3vw;
+    font-family: var(--font-mono);
+    letter-spacing: 0.1em;
+}
+
+.cinematic-links a {
+    color: var(--text-muted);
+    transition: color 0.3s, text-shadow 0.3s;
+    text-decoration: none;
+}
+
+.cinematic-links a:hover {
+    color: var(--text-main);
+    text-shadow: 0 0 10px rgba(255,255,255,0.5);
+}
+
+.cinematic-credits {
+    margin-top: 6vw;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: rgba(255,255,255,0.3);
+}
+
+/* ==========================================================================
+   EVENT PANELS (CINEMATIC OVERRIDES)
+   ========================================================================== */
+.event-panel {
+    border-radius: 0;
+    border: none;
+    border-left: 1px solid rgba(255,255,255,0.1);
+    background: transparent !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.event-panel::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.02), transparent);
+    z-index: -1;
+    transition: opacity 0.4s;
+}
+
+.event-panel:hover::before {
+    opacity: 0;
+}
+
+.ep-bg-num {
+    opacity: 0.2; /* Visible without hover */
+    color: var(--violet-neon);
+    transition: transform 0.8s cubic-bezier(0.2, 1, 0.2, 1), opacity 0.8s, color 0.8s;
+}
+
+.event-panel:hover .ep-bg-num {
+    opacity: 0.4;
+    transform: scale(1.1) translate(-2vw, 2vw);
+    color: var(--magenta);
+}
+
+.bg-energy-1:hover .ep-inner { background: radial-gradient(circle at 100% 0%, rgba(139, 92, 246, 0.2) 0%, transparent 50%); }
+.bg-energy-2:hover .ep-inner { background: radial-gradient(circle at 100% 0%, rgba(217, 70, 239, 0.2) 0%, transparent 50%); }
+.bg-energy-3:hover .ep-inner { background: radial-gradient(circle at 100% 0%, rgba(76, 29, 149, 0.2) 0%, transparent 50%); }
+.bg-energy-4:hover .ep-inner { background: radial-gradient(circle at 100% 0%, rgba(236, 72, 153, 0.2) 0%, transparent 50%); }
+
+/* ==========================================================================
+   RESPONSIVE OVERRIDES
+   ========================================================================== */
+@media (max-width: 768px) {
+    .glance-split {
+        flex-direction: column;
+        gap: 4vw;
+        align-items: flex-start;
+        text-align: left;
+    }
+    .glance-deadline {
+        align-items: flex-start;
+        text-align: left;
+    }
+    .cinematic-podium {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+    }
+    .reg-details-cinematic {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .rd-sep {
+        width: 40px;
+        height: 1px;
+    }
+    .cinematic-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}

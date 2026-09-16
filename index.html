@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>ITCODERA '26 | Humanizing Technology</title>
+    <meta name="description" content="ITCODERA '26 — International Student Symposium on Humanizing Technology. Department of Information Technology, EGS Pillay Engineering College.">
+    <meta name="theme-color" content="#05020D">
+
+    <!-- Preconnect & Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cinematic.css">
+</head>
+<body class="loading">
+    <!-- SVG Noise Grain -->
+    <svg class="noise-overlay" xmlns="http://www.w3.org/2000/svg">
+        <filter id="noiseFilter">
+            <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/>
+        </filter>
+        <rect width="100%" height="100%" filter="url(#noiseFilter)"/>
+    </svg>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline">
+        <span class="cursor-text"></span>
+    </div>
+
+    <!-- Global Light Field -->
+    <div class="global-light-field">
+        <div class="gl-orb gl-orb-1"></div>
+        <div class="gl-orb gl-orb-2"></div>
+        <div class="gl-orb gl-orb-3"></div>
+    </div>
+    
+    <!-- Signature Floating Element -->
+    <div class="signature-orb" id="signature-orb"></div>
+
+    <div class="grid-overlay"></div>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress-container">
+        <div class="scroll-progress-bar"></div>
+    </div>
+
+    <!-- Mobile Navigation Overlay -->
+    <nav class="mobile-nav">
+        <div class="mobile-nav-bg"></div>
+        <button class="mobile-close-btn" aria-label="Close menu">
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="mobile-nav-links">
+            <li><a href="#hero">HOME</a></li>
+            <li><a href="#events">EVENTS</a></li>
+            <li><a href="#prizes">PRIZES</a></li>
+            <li><a href="#register">REGISTER</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+            <li><a href="#location">LOCATION</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="#hero" class="logo">
+                <span class="logo-text">ITCODERA</span>
+                <span class="logo-year">'26</span>
+            </a>
+            
+            <nav class="desktop-nav">
+                <a href="#events">EVENTS</a>
+                <a href="#prizes">PRIZES</a>
+                <a href="#contact">CONTACT</a>
+                <a href="#location">LOCATION</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="PLACEHOLDER_REGISTER_URL" target="_blank" rel="noopener" class="btn btn-primary magnetic" data-strength="20">
+                    <span>REGISTER NOW</span>
+                </a>
+                <button class="hamburger magnetic" aria-label="Open menu" data-strength="15">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION: Tech Fest Focus -->
+        <section id="hero" class="hero">
+            <!-- Digital Energy Core -->
+            <div class="energy-core-container">
+                <div class="energy-core">
+                    <div class="core-glow"></div>
+                    <div class="core-ring ring-1"></div>
+                    <div class="core-ring ring-2"></div>
+                    <div class="core-particles" id="core-particles"></div>
+                </div>
+            </div>
+            
+            <div class="hero-content">
+                <div class="hero-dept-info reveal-up">
+                    <span class="tech-badge">EGS PILLAY ENGINEERING COLLEGE</span>
+                    <span class="tech-badge alt">DEPARTMENT OF INFORMATION TECHNOLOGY</span>
+                </div>
+                
+                <div class="hero-title-wrapper reveal-up">
+                    <h1 class="hero-title massive" data-text="ITCODERA">
+                        ITCODERA <span class="accent-gradient">'26</span>
+                    </h1>
+                </div>
+                
+                <h2 class="hero-theme reveal-up">HUMANIZING TECHNOLOGY</h2>
+                
+                <div class="hero-dates reveal-up">
+                    <div class="date-block">
+                        <span class="db-label">EVENT DATES</span>
+                        <span class="db-val">14–15 OCT 2026</span>
+                    </div>
+                    <div class="date-block highlight">
+                        <span class="db-label">REGISTRATION DEADLINE</span>
+                        <span class="db-val">30 SEP 2026</span>
+                    </div>
+                </div>
+                
+                <div class="hero-ctas reveal-up">
+                    <a href="PLACEHOLDER_REGISTER_URL" target="_blank" class="btn btn-glow magnetic" data-strength="25">
+                        <span>REGISTER NOW</span>
+                    </a>
+                    <a href="#events" class="btn btn-outline magnetic" data-strength="15">
+                        <span>EXPLORE EVENTS ↓</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- THE EVENT AT A GLANCE -->
+        <section id="glance" class="glance-section cinematic-section">
+            <div class="glance-container">
+                <div class="glance-split">
+                    <div class="glance-date g-slide-left">
+                        <span class="g-massive">14–15</span>
+                        <div class="g-sub">
+                            <span>OCTOBER</span>
+                            <span>2026</span>
+                        </div>
+                    </div>
+                    <div class="glance-deadline g-slide-right">
+                        <span class="g-sub-lbl">REGISTRATION DEADLINE</span>
+                        <span class="g-massive-alt">30 SEP</span>
+                    </div>
+                </div>
+                
+                <div class="glance-centerpiece">
+                    <div class="prize-glow-bg"></div>
+                    <span class="g-prize-val accent-gradient">₹9,000</span>
+                    <span class="g-prize-lbl">TOTAL PRIZE POOL</span>
+                </div>
+                
+                <div class="glance-footer">
+                    <div class="g-stat g-slide-up"><span class="accent-gradient">04</span> EVENTS</div>
+                    <div class="g-stat g-slide-up"><span class="accent-gradient">FREE</span> ENTRY</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- COUNTDOWN SECTION -->
+        <section class="countdown-section cinematic-section">
+            <div class="cd-bg-elements">
+                <div class="cd-glow"></div>
+                <div class="cd-ring cd-ring-1"></div>
+                <div class="cd-ring cd-ring-2"></div>
+            </div>
+            <div class="countdown-container">
+                <h3 class="cd-main-title reveal-text">THE COUNTDOWN IS ON</h3>
+                
+                <div class="cd-grid cinematic-grid" id="countdown">
+                    <div class="cd-item cd-reveal">
+                        <div class="cd-val accent-gradient" id="cd-days">--</div>
+                        <div class="cd-lbl">DAYS</div>
+                        <div class="cd-sep"></div>
+                    </div>
+                    <div class="cd-item cd-reveal">
+                        <div class="cd-val accent-gradient" id="cd-hours">--</div>
+                        <div class="cd-lbl">HOURS</div>
+                        <div class="cd-sep"></div>
+                    </div>
+                    <div class="cd-item cd-reveal">
+                        <div class="cd-val accent-gradient" id="cd-mins">--</div>
+                        <div class="cd-lbl">MINUTES</div>
+                        <div class="cd-sep"></div>
+                    </div>
+                    <div class="cd-item cd-reveal">
+                        <div class="cd-val accent-gradient" id="cd-secs">--</div>
+                        <div class="cd-lbl">SECONDS</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EVENTS SECTION (Horizontal Scroll) -->
+        <section id="events" class="events-section">
+            <div class="events-header">
+                <h2 class="section-title">EXPLORE THE EVENTS</h2>
+                <div class="events-tracker">
+                    <span class="current-event-num">01</span> / 04
+                    <span class="scroll-hint">SCROLL TO EXPLORE →</span>
+                </div>
+            </div>
+            
+            <div class="events-wrapper">
+                <div class="events-track">
+                    
+                    <!-- Event 01 -->
+                    <div class="event-panel bg-energy-1" data-cursor-text="VIEW">
+                        <div class="ep-bg-num">01</div>
+                        <div class="ep-inner">
+                            <div class="ep-header">
+                                <span class="ep-num">EVENT 01</span>
+                                <span class="ep-badge technical">TECHNICAL</span>
+                            </div>
+                            <h3 class="ep-title">ONLINE ARTICLE<br>PRESENTATION</h3>
+                            <div class="ep-micro">
+                                <span class="m-tag"><span class="dot live"></span> REGISTRATION OPEN</span>
+                                <span class="m-tag">14 OCT</span>
+                                <span class="m-tag">ONLINE</span>
+                            </div>
+                            <div class="ep-details">
+                                <p class="ep-desc">Submit your article through the Unstop platform and present your work to our expert panel.</p>
+                                <ul class="ep-specs">
+                                    <li><span class="lbl">TEAM SIZE</span> UP TO 3</li>
+                                    <li><span class="lbl">PLATFORM</span> UNSTOP</li>
+                                    <li><span class="lbl">ENTRY</span> FREE</li>
+                                </ul>
+                                <a href="PLACEHOLDER_REGISTER_URL" target="_blank" class="btn btn-outline mt-auto">REGISTER NOW</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Event 02 -->
+                    <div class="event-panel bg-energy-2" data-cursor-text="VIEW">
+                        <div class="ep-bg-num">02</div>
+                        <div class="ep-inner">
+                            <div class="ep-header">
+                                <span class="ep-num">EVENT 02</span>
+                                <span class="ep-badge technical">TECHNICAL</span>
+                            </div>
+                            <h3 class="ep-title">HACKVERSE</h3>
+                            <div class="ep-micro">
+                                <span class="m-tag"><span class="dot live"></span> REGISTRATION OPEN</span>
+                                <span class="m-tag">15 OCT</span>
+                                <span class="m-tag">CAMPUS</span>
+                            </div>
+                            <div class="ep-details">
+                                <p class="ep-desc">An idea-to-prototype hackathon. Take a problem from sketch to a working solution against the clock.</p>
+                                <ul class="ep-specs">
+                                    <li><span class="lbl">TEAM SIZE</span> UP TO 4</li>
+                                    <li><span class="lbl">REQUIREMENT</span> BRING LAPTOP</li>
+                                    <li><span class="lbl">ENTRY</span> FREE</li>
+                                </ul>
+                                <a href="PLACEHOLDER_REGISTER_URL" target="_blank" class="btn btn-outline mt-auto">REGISTER NOW</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Event 03 -->
+                    <div class="event-panel bg-energy-3" data-cursor-text="VIEW">
+                        <div class="ep-bg-num">03</div>
+                        <div class="ep-inner">
+                            <div class="ep-header">
+                                <span class="ep-num">EVENT 03</span>
+                                <span class="ep-badge technical">TECHNICAL</span>
+                            </div>
+                            <h3 class="ep-title">STAKE-N-SOLVE</h3>
+                            <div class="ep-micro">
+                                <span class="m-tag"><span class="dot live"></span> REGISTRATION OPEN</span>
+                                <span class="m-tag">15 OCT</span>
+                                <span class="m-tag">CAMPUS</span>
+                            </div>
+                            <div class="ep-details">
+                                <p class="ep-desc">A rapid case-study challenge. Analyse a live problem statement and pitch your fix to the judges.</p>
+                                <ul class="ep-specs">
+                                    <li><span class="lbl">TEAM SIZE</span> UP TO 3</li>
+                                    <li><span class="lbl">FORMAT</span> NO CODING</li>
+                                    <li><span class="lbl">ENTRY</span> FREE</li>
+                                </ul>
+                                <a href="PLACEHOLDER_REGISTER_URL" target="_blank" class="btn btn-outline mt-auto">REGISTER NOW</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Event 04 -->
+                    <div class="event-panel bg-energy-4" data-cursor-text="VIEW">
+                        <div class="ep-bg-num">04</div>
+                        <div class="ep-inner">
+                            <div class="ep-header">
+                                <span class="ep-num">EVENT 04</span>
+                                <span class="ep-badge non-technical">NON-TECHNICAL</span>
+                            </div>
+                            <h3 class="ep-title">KARUTHU KACHERI</h3>
+                            <div class="ep-micro">
+                                <span class="m-tag"><span class="dot live"></span> REGISTRATION OPEN</span>
+                                <span class="m-tag">15 OCT</span>
+                                <span class="m-tag">CAMPUS</span>
+                            </div>
+                            <div class="ep-details">
+                                <p class="ep-desc">An open-floor Tamil discussion and debate on a current technology or social topic. Speak your side, defend it.</p>
+                                <ul class="ep-specs">
+                                    <li><span class="lbl">LANGUAGE</span> TAMIL</li>
+                                    <li><span class="lbl">TEAM SIZE</span> TBD</li>
+                                    <li><span class="lbl">ENTRY</span> FREE</li>
+                                </ul>
+                                <a href="PLACEHOLDER_REGISTER_URL" target="_blank" class="btn btn-outline mt-auto">REGISTER NOW</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- PRIZES SECTION -->
+        <section id="prizes" class="prizes-section cinematic-section">
+            <div class="prize-energy-bg"></div>
+            <div class="prizes-container">
+                <h2 class="section-title text-center reveal-text">WIN THE SPOTLIGHT</h2>
+                <div class="total-pool-cinematic">
+                    <span class="tp-lbl">TOTAL PRIZE POOL</span>
+                    <span class="tp-val accent-gradient" id="prize-pool-val">₹9,000</span>
+                </div>
+                
+                <div class="prize-showcase cinematic-podium">
+                    <div class="prize-tier rank-2 cinematic-card">
+                        <div class="pt-amount">₹3,000</div>
+                        <div class="pt-label">SECOND</div>
+                    </div>
+                    
+                    <div class="prize-tier rank-1 spotlight cinematic-card center-stage">
+                        <div class="pt-glow-epic"></div>
+                        <div class="pt-amount accent-gradient">₹5,000</div>
+                        <div class="pt-label">FIRST PRIZE</div>
+                    </div>
+                    
+                    <div class="prize-tier rank-3 cinematic-card">
+                        <div class="pt-amount">₹1,000</div>
+                        <div class="pt-label">THIRD</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- REGISTRATION SECTION -->
+        <section id="register" class="registration-section cinematic-section">
+            <div class="reg-epic-bg"></div>
+            <div class="reg-container cinematic-reg">
+                <h2 class="reg-headline reveal-text">READY TO COMPETE?</h2>
+                <h3 class="reg-sub">ITCODERA '26</h3>
+                
+                <div class="reg-details-cinematic">
+                    <div class="rd-item">
+                        <span>14–15 OCTOBER 2026</span>
+                    </div>
+                    <div class="rd-sep"></div>
+                    <div class="rd-item highlight-rd">
+                        <span>REGISTRATION CLOSES<br>30 SEPTEMBER 2026</span>
+                    </div>
+                </div>
+                
+                <div class="reg-cta-wrapper">
+                    <div class="reg-cta-glow"></div>
+                    <a href="PLACEHOLDER_REGISTER_URL" target="_blank" class="btn btn-epic magnetic" data-strength="30">
+                        <span>REGISTER NOW</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT & LOCATION -->
+        <section id="contact-location" class="info-section cinematic-section">
+            <div class="info-container">
+                
+                <!-- Contact -->
+                <div class="info-card cinematic-info" id="contact">
+                    <h3 class="info-title reveal-text">CONTACT</h3>
+                    <h4 class="info-subtitle">LET'S CONNECT.</h4>
+                    
+                    <div class="contact-group">
+                        <h4 class="cg-title">FACULTY COORDINATORS</h4>
+                        <div class="c-person">
+                            <strong>Dr. G. Arul Selvan</strong>
+                            <span>Convenor · HOD, IT</span>
+                        </div>
+                        <div class="c-person">
+                            <strong>Mr. A. Rajesh, M.E.</strong>
+                            <span>Staff Coordinator · AP, IT</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-group">
+                        <h4 class="cg-title">STUDENT COORDINATORS</h4>
+                        <div class="c-grid">
+                            <div class="c-person">
+                                <strong>A. R. Harish</strong>
+                                <span>President</span>
+                                <a href="tel:+916374510134">+91 63745 10134</a>
+                            </div>
+                            <div class="c-person">
+                                <strong>T. Manikandan</strong>
+                                <span>Vice President</span>
+                                <a href="tel:+919025509012">+91 90255 09012</a>
+                            </div>
+                            <div class="c-person">
+                                <strong>K. Rithika</strong>
+                                <span>Secretary</span>
+                            </div>
+                            <div class="c-person">
+                                <strong>B. Priyadharshini</strong>
+                                <span>Joint Secretary</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="mailto:PLACEHOLDER_EMAIL" class="btn btn-outline w-full mt-auto">EMAIL SUPPORT</a>
+                </div>
+
+                <!-- Location -->
+                <div class="info-card cinematic-info" id="location">
+                    <h3 class="info-title reveal-text">VENUE</h3>
+                    <div class="venue-info">
+                        <strong>EGS PILLAY ENGINEERING COLLEGE</strong>
+                        <span>IT BLOCK</span>
+                        <span class="venue-date">15 OCTOBER 2026</span>
+                    </div>
+                    
+                    <div class="map-wrapper cinematic-map">
+                        <div class="map-glow"></div>
+                        <iframe title="Map to EGS Pillay Engineering College" src="https://www.google.com/maps?q=EGS%20Pillay%20Engineering%20College&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    
+                    <a href="https://www.google.com/maps/search/?api=1&query=EGS+Pillay+Engineering+College" target="_blank" class="btn btn-outline w-full map-btn">GET DIRECTIONS →</a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="faq-section cinematic-section">
+            <div class="faq-container">
+                <h2 class="section-title text-center mb-4 reveal-text">FAQ</h2>
+                
+                <div class="accordion cinematic-accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-trigger" aria-expanded="false">
+                            <span class="acc-title">What does it cost?</span>
+                            <span class="acc-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Registration is completely free for all participants.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <button class="accordion-trigger" aria-expanded="false">
+                            <span class="acc-title">Do we need a laptop?</span>
+                            <span class="acc-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Hackverse teams should bring a fully charged laptop. The other events do not require one.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-trigger" aria-expanded="false">
+                            <span class="acc-title">Do we need to bring ID?</span>
+                            <span class="acc-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Yes, all participants must carry their valid college ID card on the day of the event.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <button class="accordion-trigger" aria-expanded="false">
+                            <span class="acc-title">What are the team sizes?</span>
+                            <span class="acc-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Article Presentation: up to 3. Hackverse: up to 4. Stake-n-Solve: up to 3. Karuthu Kacheri: TBD.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <button class="accordion-trigger" aria-expanded="false">
+                            <span class="acc-title">How many events can one team enter?</span>
+                            <span class="acc-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>One technical event and one non-technical event, on a single registration.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer cinematic-footer">
+        <div class="footer-glow-bg"></div>
+        <div class="footer-container">
+            <h2 class="f-headline massive" data-text="ITCODERA '26">ITCODERA '26</h2>
+            <h3 class="f-subheadline">HUMANIZING TECHNOLOGY</h3>
+            
+            <div class="f-links mt-4 cinematic-links">
+                <a href="https://www.instagram.com/egspgoi" target="_blank" class="f-link">INSTAGRAM ↗</a>
+                <a href="PLACEHOLDER_LINKEDIN" target="_blank" class="f-link">LINKEDIN ↗</a>
+                <a href="PLACEHOLDER_BROCHURE_PDF" target="_blank" class="f-link">BROCHURE ↗</a>
+            </div>
+            
+            <div class="f-bottom mt-4 cinematic-credits">
+                <p>Department of Information Technology, EGS Pillay Engineering College</p>
+                <p>&copy; 2026 ITCODERA. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GSAP & Plugins -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
