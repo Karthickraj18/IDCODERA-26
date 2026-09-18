@@ -569,7 +569,7 @@
 /* ==========================================================================
    RESPONSIVE OVERRIDES
    ========================================================================== */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .glance-split {
         flex-direction: column;
         gap: 4vw;
@@ -583,18 +583,36 @@
     .cinematic-podium {
         flex-direction: column;
         height: auto;
-        align-items: center;
+        align-items: stretch;
+    }
+    .cinematic-card {
+        width: 100% !important;
+        margin-bottom: 2vw;
+    }
+    .cinematic-card.center-stage {
+        height: auto;
     }
     .reg-details-cinematic {
         flex-direction: column;
         gap: 1rem;
     }
     .rd-sep {
-        width: 40px;
+        width: 100px;
         height: 1px;
     }
     .cinematic-links {
         flex-direction: column;
         gap: 1rem;
+    }
+    .btn-epic {
+        padding: 16px 30px;
+        font-size: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .reg-cta-wrapper {
+        width: 100%;
+        display: block;
     }
 }
