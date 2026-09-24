@@ -1,5 +1,5 @@
 /**
- * ITCODERA '26 Main JavaScript (WOW VISUAL UPGRADE)
+ * AURA '26 Main JavaScript (WOW VISUAL UPGRADE)
  */
 
 gsap.registerPlugin(ScrollTrigger);
