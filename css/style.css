@@ -536,7 +536,12 @@ body:not(.is-mobile) a, body:not(.is-mobile) button { cursor: none; }
     z-index: 2;
 }
 
-.hero-title.massive::before {
+.aura-text {
+    position: relative;
+    display: inline-block;
+}
+
+.aura-text::before {
     content: attr(data-text);
     position: absolute;
     inset: 0;
