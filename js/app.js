@@ -268,7 +268,7 @@ function initAnimations() {
             scrub: 1,
             invalidateOnRefresh: true,
             onUpdate: (self) => {
-                let activeIdx = Math.min(3, Math.floor(self.progress * 4));
+                let activeIdx = Math.min(4, Math.floor(self.progress * 5));
                 const numDisplay = document.querySelector('.current-event-num');
                 if(numDisplay) numDisplay.innerText = '0' + (activeIdx + 1);
             }
@@ -326,7 +326,7 @@ function initAnimations() {
 // ==========================================================================
 // COUNTDOWN TIMER
 // ==========================================================================
-const targetDate = new Date("2026-10-14T09:00:00+05:30").getTime();
+const targetDate = new Date("2026-10-10T09:00:00+05:30").getTime();
 const els = {
     days: document.getElementById('cd-days'),
     hours: document.getElementById('cd-hours'),
