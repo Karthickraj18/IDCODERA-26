@@ -110,13 +110,14 @@
                     <span class="tech-badge alt">DEPARTMENT OF INFORMATION TECHNOLOGY</span>
                 </div>
                 
-                <div class="hero-title-wrapper reveal-up">
+                <div class="hero-title-wrapper reveal-up" style="position: relative;">
                     <div class="dragon-bg-container">
                         <img src="img/dragon_only.svg" alt="Dragon Background" class="dragon-bg">
                     </div>
-                    <h1 class="hero-title massive">
+                    <h1 class="hero-title massive" style="opacity: 0; pointer-events: none; user-select: none;">
                         <span class="aura-text" data-text="AURA">AURA</span> <span class="accent-gradient">'26</span>
                     </h1>
+                    <canvas id="particle-text-canvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 10; cursor: crosshair; touch-action: none;"></canvas>
                 </div>
                 
                 <h2 class="hero-theme reveal-up">HUMANIZING TECHNOLOGY</h2>
@@ -162,7 +163,7 @@
                 
                 <div class="glance-centerpiece">
                     <div class="prize-glow-bg"></div>
-                    <span class="g-prize-val accent-gradient">₹9,000</span>
+                    <span class="g-prize-val accent-gradient">₹27,000</span>
                     <span class="g-prize-lbl">TOTAL PRIZE POOL</span>
                 </div>
                 
@@ -361,7 +362,7 @@
                 <h2 class="section-title text-center reveal-text">WIN THE SPOTLIGHT</h2>
                 <div class="total-pool-cinematic">
                     <span class="tp-lbl">TOTAL PRIZE POOL</span>
-                    <span class="tp-val accent-gradient" id="prize-pool-val">₹9,000</span>
+                    <span class="tp-val accent-gradient" id="prize-pool-val">₹27,000</span>
                 </div>
                 
                 <div class="prize-showcase cinematic-podium">
@@ -562,6 +563,7 @@
     <!-- GSAP & Plugins -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="js/particles-text.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>

@@ -426,7 +426,6 @@
     height: 300px;
     border-radius: 10px;
     border: none;
-    filter: grayscale(1) contrast(1.2) sepia(0.2) hue-rotate(240deg);
 }
 
 .map-glow {
